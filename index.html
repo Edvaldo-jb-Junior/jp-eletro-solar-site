@@ -1,607 +1,209 @@
 <!doctype html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>JP Eletro Solar | Energia Solar e Elétrica em Pontal-SP</title>
-    <meta name="description" content="JP Eletro Solar em Pontal-SP: instalações elétricas com NR10, energia solar com até 95% de economia e loja física completa."/>
-    <meta name="theme-color" content="#020617"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter','sans-serif'], display: ['Montserrat','sans-serif'] },
-                    colors: { brand: { yellow: '#FACC15', blue: '#1E3A8A', dark: '#020617' } },
-                    boxShadow: { soft: '0 10px 40px -10px rgba(0,0,0,0.15)' }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JP Eletro Solar | Energia Solar e Elétrica em Pontal-SP</title>
+<meta name="description" content="JP Eletro Solar em Pontal-SP: instalações elétricas com NR10, energia solar com até 95% de economia e loja física completa.">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#FCFCF9] text-slate-800 selection:bg-brand-yellow selection:text-slate-950">
-
-<!-- HEADER -->
-<header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div id="header-inner"
-             class="mt-4 flex h-[64px] items-center justify-between rounded-[16px] border border-white/10 bg-slate-950/85 px-4 lg:px-5 backdrop-blur-xl shadow-soft">
-            <a href="#" class="flex items-center gap-3">
-                <div class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-brand-yellow text-slate-950 font-display font-extrabold text-[18px] leading-none">JP</div>
-                <div class="leading-[0.9]">
-                    <div class="font-display font-extrabold text-[15px] tracking-tight text-white">ELETRO SOLAR</div>
-                    <div class="text-[10px] font-semibold tracking-[0.18em] text-white/60">PONTAL • SP</div>
-                </div>
-            </a>
-
-            <nav class="hidden lg:flex items-center gap-1 rounded-full bg-white/[0.06] p-1">
-                <a href="#servicos" class="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white hover:text-slate-900 transition">Serviços</a>
-                <a href="#solar" class="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white hover:text-slate-900 transition">Solar</a>
-                <a href="#loja" class="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white hover:text-slate-900 transition">Loja</a>
-                <a href="#sobre" class="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white hover:text-slate-900 transition">Sobre</a>
-                <a href="#contato" class="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white hover:text-slate-900 transition">Contato</a>
-            </nav>
-
-            <div class="flex items-center gap-2">
-                <a id="cta-header" target="_blank" rel="noopener"
-                   href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20com%20a%20JP%20Eletro%20Solar"
-                   class="hidden lg:inline-flex h-10 items-center justify-center gap-2 rounded-full bg-brand-yellow px-5 text-[14px] font-bold text-slate-950 transition hover:bg-yellow-300 active:scale-[0.98]">
-                    <span>Orçamento WhatsApp</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
-                </a>
-                <button id="menu-btn" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-900">
-                    <svg id="menu-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    <svg id="menu-close" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-nav" class="lg:hidden hidden mt-3 rounded-[18px] border border-slate-200 bg-white p-3 shadow-soft">
-            <div class="grid gap-1">
-                <a href="#servicos" class="rounded-xl px-4 py-3 text-[15px] font-medium hover:bg-slate-50">Serviços</a>
-                <a href="#solar" class="rounded-xl px-4 py-3 text-[15px] font-medium hover:bg-slate-50">Energia Solar</a>
-                <a href="#loja" class="rounded-xl px-4 py-3 text-[15px] font-medium hover:bg-slate-50">Loja Física</a>
-                <a href="#sobre" class="rounded-xl px-4 py-3 text-[15px] font-medium hover:bg-slate-50">Sobre Nós</a>
-                <a href="#contato" class="rounded-xl px-4 py-3 text-[15px] font-medium hover:bg-slate-50">Contato</a>
-            </div>
-            <a target="_blank" href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"
-               class="mt-3 flex h-12 items-center justify-center gap-2 rounded-full bg-brand-yellow font-bold text-slate-950">Orçamento WhatsApp</a>
-        </div>
-    </div>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">JP<span>Eletro</span>Solar</a>
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#solar">Solar</a>
+      <a href="#loja">Loja</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#" class="btn btn-primary" data-wa-link data-wa-base="Olá! Gostaria de um orçamento com a JP Eletro Solar.">Orçamento WhatsApp</a>
+    <button class="menu-btn" id="menu-btn">☰</button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#servicos">Serviços</a>
+    <a href="#solar">Solar</a>
+    <a href="#loja">Loja</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+    <a href="#" class="btn btn-primary" data-wa-link data-wa-base="Olá! Gostaria de um orçamento com a JP Eletro Solar.">Orçamento WhatsApp</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="relative overflow-hidden bg-slate-950 pt-[108px] lg:pt-[132px] pb-10 lg:pb-16">
-    <div class="pointer-events-none absolute inset-0">
-        <div class="absolute -top-32 -left-32 h-[560px] w-[560px] rounded-full bg-brand-blue/30 blur-[120px]"></div>
-        <div class="absolute -bottom-40 -right-20 h-[720px] w-[720px] rounded-full bg-brand-yellow/20 blur-[110px]"></div>
-        <div class="absolute inset-0 opacity-[0.06]" style="background-image:linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 52px 52px;"></div>
+<section id="inicio" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="badge">10+ ANOS • NR10 QUALIFICADO • PONTAL E REGIÃO</span>
+      <h1>Energia segura, conta de luz até <span class="highlight">95% menor</span></h1>
+      <p>Instalação elétrica profissional e projetos de energia solar completos, do residencial ao comercial, com garantia e segurança.</p>
+      <div class="hero-actions">
+        <a href="#solar" class="btn btn-primary">Simular Economia</a>
+        <a href="#loja" class="btn btn-outline">Ver Loja Física</a>
+      </div>
+      <ul class="features">
+        <li>✓ Orçamento gratuito</li>
+        <li>✓ Garantia de 25 anos nas placas</li>
+        <li>✓ Instalação em até 48h</li>
+      </ul>
     </div>
-
-    <div class="relative mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-8 items-start">
-            <div class="reveal in">
-                <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-[11px] font-semibold tracking-wide text-white/80 backdrop-blur">
-                    <span class="inline-flex h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
-                    MAIS DE 10 ANOS • NR10 CERTIFICADO • ATENDEMOS PONTAL E REGIÃO
-                </div>
-                <h1 class="font-display mt-6 text-[36px] leading-[0.95] sm:text-[52px] lg:text-[68px] font-extrabold text-white">
-                    Energia segura,<br/>
-                    <span class="text-brand-yellow">conta de luz até</span><br/>
-                    <span class="relative inline-block">
-                        95% menor
-                        <span class="absolute bottom-[6px] left-0 -z-10 h-[14px] w-full bg-brand-yellow/20 -rotate-[1deg]"></span>
-                    </span>
-                </h1>
-                <p class="mt-5 max-w-[560px] text-[16px] lg:text-[18px] leading-[1.6] text-white/70">
-                    Somos especialistas em instalações elétricas residenciais, comerciais e industriais. Instalamos seu sistema solar com segurança, garantia e materiais homologados. Loja física completa para o dia a dia.
-                </p>
-
-                <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                    <a target="_blank" href="https://wa.me/5516999999999?text=Quero%20reduzir%20minha%20conta%20de%20luz%20em%20at%C3%A9%2095%25"
-                       class="inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-brand-yellow px-7 text-[15px] font-bold text-slate-950 shadow-[0_10px_30px_-10px_rgba(250,204,21,0.6)] transition hover:bg-yellow-300">
-                        Simular minha economia
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                    </a>
-                    <a href="#servicos"
-                       class="inline-flex h-[52px] items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-7 text-[15px] font-semibold text-white backdrop-blur hover:bg-white hover:text-slate-900 transition">
-                        Conheça nossos serviços
-                    </a>
-                </div>
-
-                <div class="mt-8 grid grid-cols-3 max-w-[520px] gap-3">
-                    <div class="rounded-[14px] border border-white/10 bg-white/[0.04] p-3">
-                        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-900">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10z"/></svg>
-                        </div>
-                        <div class="mt-2 text-[12px] font-bold leading-tight text-white">NR10 + NR35<br/><span class="font-medium text-white/60">Equipe certificada</span></div>
-                    </div>
-                    <div class="rounded-[14px] border border-white/10 bg-white/[0.04] p-3">
-                        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-900">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
-                        </div>
-                        <div class="mt-2 text-[12px] font-bold leading-tight text-white">Garantia estendida<br/><span class="font-medium text-white/60">Até 25 anos no solar</span></div>
-                    </div>
-                    <div class="rounded-[14px] border border-white/10 bg-white/[0.04] p-3">
-                        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-900">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                        </div>
-                        <div class="mt-2 text-[12px] font-bold leading-tight text-white">Homologado<br/><span class="font-medium text-white/60">INMETRO e concessionária</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="reveal in relative lg:sticky lg:top-[110px]">
-                <div class="relative overflow-hidden rounded-[28px] border border-white/10 bg-slate-900 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="Instalação de painéis solares"
-                         class="h-[420px] w-full object-cover lg:h-[560px]"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-
-                    <!-- Floating economia card -->
-                    <div class="absolute bottom-4 left-4 right-4 rounded-[18px] border border-white/10 bg-white p-4 shadow-soft backdrop-blur-xl">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-brand-yellow">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 6-6"/></svg>
-                                </div>
-                                <div>
-                                    <div class="text-[12px] font-semibold tracking-wide text-slate-500">ECONOMIA MÉDIA CLIENTES</div>
-                                    <div class="font-display text-[18px] font-extrabold leading-none text-slate-900">R$ 847/mês • 94% redução</div>
-                                </div>
-                            <div class="hidden sm:flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg>
-                            </div>
-                        </div>
-                        <div class="mt-3 grid grid-cols-3 gap-2 text-center">
-                            <div class="rounded-xl bg-slate-50 py-2"><div class="text-[11px] font-semibold text-slate-500">ANTES</div><div class="font-bold text-slate-900">R$ 912</div></div>
-                            <div class="rounded-xl bg-brand-yellow py-2"><div class="text-[11px] font-semibold text-slate-800">AGORA</div><div class="font-bold text-slate-950">R$ 65</div></div>
-                            <div class="rounded-xl bg-slate-900 py-2"><div class="text-[11px] font-semibold text-white/60">PAYBACK</div><div class="font-bold text-white">28 meses</div></div>
-                        </div>
-                    </div>
-
-                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[12px] font-bold text-slate-900 backdrop-blur">
-                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span> Obra entregue em Pontal-SP
-                    </div>
-                </div>
-
-                <div class="mt-3 flex items-center gap-2 text-[12px] text-white/60">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=200&auto=format&fit=crop" class="h-8 w-8 rounded-full object-cover border-2 border-white/10" alt=""/>
-                    <img src="https://images.unsplash.com/photo-1600480505021-e9cfb05527f1?q=80&w=200&auto=format&fit=crop" class="h-8 w-8 -ml-2 rounded-full object-cover border-2 border-white/10" alt=""/>
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" class="h-8 w-8 -ml-2 rounded-full object-cover border-2 border-white/10" alt=""/>
-                    <span class="ml-1">+48 instalações só nos últimos 6 meses na região</span>
-                </div>
-            </div>
-        </div>
+    <div class="hero-card">
+      <h3>Simule sua economia agora</h3>
+      <p>Veja em 10 segundos quanto você vai economizar</p>
+      <a href="#solar" class="btn btn-primary btn-full">Calcular Sistema Solar</a>
     </div>
+  </div>
 </section>
 
-<!-- PROVA SOCIAL BAR -->
-<section class="relative border-y border-slate-200 bg-white">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-slate-200">
-            <div class="flex items-center gap-4 py-6 px-2 lg:px-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-slate-950 text-brand-yellow font-display font-extrabold">150+</div>
-                <div><div class="font-display text-[15px] font-bold leading-none text-slate-900">Projetos entregues</div><div class="mt-1 text-[13px] text-slate-500">Residencial, comercial e industrial</div></div>
-            </div>
-            <div class="flex items-center gap-4 py-6 px-2 lg:px-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-brand-yellow font-display font-extrabold text-slate-950">10+</div>
-                <div><div class="font-display text-[15px] font-bold leading-none text-slate-900">Anos de experiência</div><div class="mt-1 text-[13px] text-slate-500">Equipe própria e qualificada</div></div>
-            </div>
-            <div class="flex items-center gap-4 py-6 px-2 lg:px-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 text-slate-900"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                <div><div class="font-display text-[15px] font-bold leading-none text-slate-900">Garantia real</div><div class="mt-1 text-[13px] text-slate-500">Suporte local e nota fiscal</div></div>
-            </div>
-            <div class="flex items-center gap-4 py-6 px-2 lg:px-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 text-slate-900"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                <div><div class="font-display text-[15px] font-bold leading-none text-slate-900">Atendimento 24h</div><div class="mt-1 text-[13px] text-slate-500">Emergências elétricas</div></div>
-            </div>
-        </div>
-    </div>
+<section class="stats">
+  <div class="container stats-grid">
+    <div><strong>150+</strong><span>Projetos Entregues</span></div>
+    <div><strong>10+</strong><span>Anos de Experiência</span></div>
+    <div><strong>25 Anos</strong><span>Garantia nas Placas</span></div>
+    <div><strong>24h</strong><span>Suporte Técnico</span></div>
+  </div>
 </section>
 
-<!-- SERVIÇOS -->
-<section id="servicos" class="bg-[#F6F5EF] py-16 lg:py-24">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div class="reveal max-w-[640px]">
-                <div class="inline-flex rounded-full bg-slate-900 px-3 py-1 text-[11px] font-bold tracking-widest text-white">NOSSOS SERVIÇOS</div>
-                <h2 class="font-display mt-4 text-[30px] lg:text-[44px] leading-[0.95] font-extrabold text-slate-900">Tudo em elétrica e solar<br/>com um só parceiro local.</h2>
-            </div>
-            <p class="reveal max-w-[440px] text-[15px] leading-[1.6] text-slate-600">Atendimento técnico rápido, projeto conforme norma NBR 5410, materiais de primeira e preço justo. De um disjuntor à usina solar completa.</p>
-        </div>
-
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-            <!-- Card 1 -->
-            <div class="reveal group relative overflow-hidden rounded-[22px] border border-slate-200 bg-white p-6 lg:p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
-                <div class="flex h-11 w-11 items-center justify-center rounded-[13px] bg-slate-900 text-brand-yellow">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                </div>
-                <h3 class="font-display mt-5 text-[18px] font-bold leading-tight">Instalações Elétricas</h3>
-                <p class="mt-2 text-[14px] leading-[1.6] text-slate-600">Instalações novas, reformas e ampliações com padrão concessionária, quadro organizado e segurança total.</p>
-                <ul class="mt-4 space-y-2 text-[13.5px] text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Residencial, comercial e industrial</li>
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Padrão de entrada e DPS / IDR</li>
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Laudo e ART com engenheiro</li>
-                </ul>
-                <div class="absolute -right-10 -bottom-10 h-28 w-28 rounded-full bg-brand-yellow/20 blur-xl group-hover:bg-brand-yellow/30 transition"></div>
-            </div>
-            <!-- Card 2 -->
-            <div class="reveal group relative overflow-hidden rounded-[22px] border border-slate-200 bg-white p-6 lg:p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
-                <div class="flex h-11 w-11 items-center justify-center rounded-[13px] bg-slate-900 text-brand-yellow">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.3-3.3a1 1 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.3 3.3z"/><path d="M5 12l3 3 4-4"/><path d="M3 21l3-3"/></svg>
-                </div>
-                <h3 class="font-display mt-5 text-[18px] font-bold leading-tight">Manutenção Preventiva e Corretiva</h3>
-                <p class="mt-2 text-[14px] leading-[1.6] text-slate-600">Diagnóstico rápido de falhas, termografia, reaperto, troca de disjuntores e correção de fuga de corrente.</p>
-                <ul class="mt-4 space-y-2 text-[13.5px] text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Atendimento emergencial 24h</li>
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Redução de quedas e queima de equipamentos</li>
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Relatório fotográfico</li>
-                </ul>
-            </div>
-            <!-- Card 3 -->
-            <div class="reveal group relative overflow-hidden rounded-[22px] border border-slate-200 bg-white p-6 lg:p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
-                <div class="flex h-11 w-11 items-center justify-center rounded-[13px] bg-slate-900 text-brand-yellow">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                </div>
-                <h3 class="font-display mt-5 text-[18px] font-bold leading-tight">Projetos Personalizados</h3>
-                <p class="mt-2 text-[14px] leading-[1.6] text-slate-600">Dimensionamento luminotécnico, diagrama unifilar e memorial para aprovação rápida e obra sem surpresa.</p>
-                <ul class="mt-4 space-y-2 text-[13.5px] text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Projeto conforme NBR 5410 / 5419</li>
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Lista de materiais otimizada para economia</li>
-                    <li class="flex gap-2"><span class="text-emerald-600">✓</span> Acompanhamento até a energização</li>
-                </ul>
-            </div>
-            <!-- Card 4 destaque -->
-            <div class="reveal group relative overflow-hidden rounded-[22px] border border-slate-900 bg-slate-950 p-6 lg:p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-2xl lg:col-span-2">
-                <div class="absolute inset-0 opacity-40" style="background:radial-gradient(600px circle at 80% 0%, rgba(250,204,21,0.25), transparent 70%)"></div>
-                <div class="relative flex h-11 w-11 items-center justify-center rounded-[13px] bg-brand-yellow text-slate-950">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-                </div>
-                <h3 class="relative font-display mt-5 text-[20px] font-bold leading-tight text-white">Energia Solar Fotovoltaica</h3>
-                <p class="relative mt-2 max-w-[520px] text-[14px] leading-[1.6] text-white/70">Sistema completo com painéis Tier 1, inversor Growatt / Solis e homologação inclusa. Sua usina produzindo em até 30 dias.</p>
-                <div class="relative mt-5 grid sm:grid-cols-3 gap-3 text-[13px]">
-                    <div class="rounded-xl bg-white/[0.06] border border-white/10 px-4 py-3 text-white"><span class="block text-white/60">Economia</span><span class="font-display font-bold text-[15px]">Até 95% na conta</span></div>
-                    <div class="rounded-xl bg-white/[0.06] border border-white/10 px-4 py-3 text-white"><span class="block text-white/60">Valorização</span><span class="font-display font-bold text-[15px]">Até 10% do imóvel</span></div>
-                    <div class="rounded-xl bg-brand-yellow px-4 py-3 text-slate-950"><span class="block text-slate-800">Monitoramento</span><span class="font-display font-bold text-[15px]">App em tempo real</span></div>
-                </div>
-                <ul class="relative mt-5 grid sm:grid-cols-2 gap-2 text-[13.5px] text-white/80">
-                    <li class="flex gap-2"><span class="text-brand-yellow">✓</span> Financiamento em até 84x</li>
-                    <li class="flex gap-2"><span class="text-brand-yellow">✓</span> Instalação com equipe própria NR10</li>
-                    <li class="flex gap-2"><span class="text-brand-yellow">✓</span> Limpeza e manutenção inclusas no 1º ano</li>
-                    <li class="flex gap-2"><span class="text-brand-yellow">✓</span> Garantia de performance 25 anos</li>
-                </ul>
-                <a href="#solar" class="relative mt-6 inline-flex h-11 items-center justify-center rounded-full bg-white px-6 text-[14px] font-bold text-slate-900 hover:bg-brand-yellow transition">Simular meu sistema agora →</a>
-            </div>
-            <!-- Card 5 -->
-            <div class="reveal group relative overflow-hidden rounded-[22px] border border-amber-200 bg-[#FFFEF3] p-6 lg:p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
-                <div class="flex h-11 w-11 items-center justify-center rounded-[13px] bg-brand-yellow text-slate-950">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                </div>
-                <h3 class="font-display mt-5 text-[18px] font-bold leading-tight text-slate-900">Loja Física Completa</h3>
-                <p class="mt-2 text-[14px] leading-[1.6] text-slate-700">Fios, cabos, disjuntores, arandelas, lâmpadas LED, spot, ferramentas e iluminação em pronta entrega.</p>
-                <ul class="mt-4 space-y-2 text-[13.5px] text-slate-800">
-                    <li class="flex gap-2"><span class="font-bold">•</span> Atendimento técnico que resolve na hora</li>
-                    <li class="flex gap-2"><span class="font-bold">•</span> Entrega rápida em Pontal e região</li>
-                    <li class="flex gap-2"><span class="font-bold">•</span> Preço de distribuidor e parcelamento</li>
-                </ul>
-            </div>
-        </div>
+<section id="servicos" class="section">
+  <div class="container">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <p class="section-sub">Soluções completas para residências, empresas e indústrias</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Instalações Elétricas</h3>
+        <p>Residenciais e comerciais com segurança e eficiência</p>
+        <ul><li>Quadro de distribuição</li><li>Iluminação LED</li><li>Aterramento</li></ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛠️</div>
+        <h3>Manutenção</h3>
+        <p>Preventiva e corretiva para garantir o funcionamento</p>
+        <ul><li>Laudo técnico</li><li>Troca de disjuntores</li><li>24h emergência</li></ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>Projetos</h3>
+        <p>Desenvolvemos projetos elétricos personalizados</p>
+        <ul><li>Planta baixa</li><li>Homologação CPFL</li><li>ART responsável</li></ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">☀️</div>
+        <h3>Energia Solar</h3>
+        <p>Projeto sob medida com economia real na conta</p>
+        <ul><li>Dimensionamento</li><li>Homologação</li><li>Monitoramento</li></ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏪</div>
+        <h3>Loja Física</h3>
+        <p>Materiais com preço justo e qualidade</p>
+        <ul><li>Fios e cabos</li><li>Lâmpadas LED</li><li>Ferramentas</li></ul>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- SOLAR + SIMULADOR -->
-<section id="solar" class="relative bg-white py-16 lg:py-24">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
-            <div class="reveal">
-                <div class="inline-flex items-center gap-2 rounded-full bg-brand-yellow px-3 py-1 text-[11px] font-bold tracking-widest text-slate-950">ENERGIA SOLAR</div>
-                <h2 class="font-display mt-4 text-[32px] lg:text-[46px] leading-[0.95] font-extrabold text-slate-900">Quanto você paga de luz hoje? A gente transforma em investimento.</h2>
-                <p class="mt-4 max-w-[560px] text-[15px] leading-[1.7] text-slate-600">Pare de alugar energia da concessionária. Nosso simulador estima seu sistema em segundos com base no consumo real da região de Pontal-SP. Sem pegadinha, cálculo transparente.</p>
-
-                <div class="mt-8 rounded-[22px] border border-slate-200 bg-[#FCFCF9] p-6 lg:p-8 shadow-soft">
-                    <label class="text-[13px] font-semibold tracking-wide text-slate-700">QUANTO VOCÊ PAGA DE LUZ? R$</label>
-                    <div class="mt-3 flex items-center gap-4">
-                        <input id="bill-input" type="range" min="120" max="5000" step="10" value="680" class="range-thumb w-full h-2 appearance-none rounded-full bg-slate-200"/>
-                        <div class="flex h-[48px] min-w-[148px] items-center justify-between rounded-full border border-slate-900 bg-white px-1 pl-4">
-                            <span class="text-[13px] font-bold text-slate-500">R$</span>
-                            <input id="bill-number" type="number" value="680" class="w-[86px] bg-transparent text-right font-display text-[20px] font-extrabold text-slate-900 outline-none"/>
-                            <div class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-slate-900 text-white ml-2 font-bold">+</div>
-                        </div>
-                    </div>
-                    <div class="mt-3 flex justify-between text-[11px] font-semibold tracking-wide text-slate-400"><span>R$ 120</span><span>R$ 5.000+</span></div>
-
-                    <div class="mt-8 grid grid-cols-3 gap-3">
-                        <div class="rounded-2xl bg-slate-900 p-4 text-white"><div class="text-[11px] text-white/60">CONSUMO ESTIMADO</div><div id="kwh-est" class="font-display mt-1 text-[18px] font-bold">~715 kWh/mês</div></div>
-                        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><div class="text-[11px] text-slate-500">POTÊNCIA NECESSÁRIA</div><div id="kwp-est" class="font-display mt-1 text-[18px] font-bold text-slate-900">5.3 kWp</div></div>
-                        <div class="rounded-2xl bg-brand-yellow p-4"><div class="text-[11px] text-slate-900/70">Nº DE PLACAS 550W</div><div id="plates-est" class="font-display mt-1 text-[18px] font-bold text-slate-950">10 placas</div></div>
-                    </div>
-                </div>
-
-                <div class="mt-6 flex gap-3 text-[13px] text-slate-500">
-                    <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-500"></span>Cálculo base irradiacão Pontal-SP 5.4 kWh/m²/dia</div>
-                </div>
-            </div>
-
-            <div class="reveal lg:sticky lg:top-[104px]">
-                <div class="overflow-hidden rounded-[28px] border border-amber-200 bg-brand-yellow shadow-[0_20px_60px_-20px_rgba(250,204,21,0.6)]">
-                    <div class="p-7 lg:p-8">
-                        <div class="flex items-center justify-between">
-                            <div class="inline-flex items-center gap-2 rounded-full bg-slate-950 px-3 py-1 text-[11px] font-bold tracking-widest text-brand-yellow">RESULTADO INSTANTÂNEO</div>
-                            <div class="text-[11px] font-semibold tracking-wide text-slate-900/60">ATUALIZADO AGORA</div>
-                        </div>
-
-                        <div class="mt-6">
-                            <div class="text-[13px] font-semibold tracking-wide text-slate-900/70">SUA ECONOMIA ESTIMADA</div>
-                            <div class="mt-1 flex items-baseline gap-2">
-                                <span class="font-display text-[44px] font-extrabold leading-none text-slate-950" id="econ-month">R$ 625</span>
-                                <span class="text-[15px] font-semibold text-slate-900/70">/mês</span>
-                            </div>
-                            <div class="mt-2 inline-flex rounded-full bg-slate-950 px-3 py-1 text-[12px] font-bold text-white">R$ <span id="econ-year" class="ml-1">7.500</span> por ano economizados • até 95%</div>
-                        </div>
-
-                        <div class="mt-6 grid grid-cols-2 gap-3">
-                            <div class="rounded-2xl bg-white p-4"><div class="text-[11px] font-semibold tracking-wide text-slate-500">INVESTIMENTO MÉDIO</div><div id="invest-est" class="font-display mt-1 text-[18px] font-extrabold text-slate-900">R$ 18.900</div><div class="mt-1 text-[11px] text-slate-500">Financiamento a partir de R$ 349/mês</div></div>
-                            <div class="rounded-2xl bg-slate-900 p-4 text-white"><div class="text-[11px] font-semibold tracking-wide text-white/60">PAYBACK</div><div id="payback-est" class="font-display mt-1 text-[18px] font-extrabold">30 meses</div><div class="mt-1 text-[11px] text-white/60">Depois é lucro por 25 anos</div></div>
-                        </div>
-
-                        <div class="mt-6 rounded-2xl bg-white/80 p-4 backdrop-blur">
-                            <div class="flex items-center gap-2 text-[13px] font-bold text-slate-900">
-                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-white">✓</span> Inclui projeto, instalação, homologação e limpeza 1º ano
-                            </div>
-                            <div class="mt-2 text-[12px] leading-[1.5] text-slate-600">Materiais Tier 1 com NF, garantia de fábrica e suporte local real. Não é franquia - somos de Pontal.</div>
-                        </div>
-
-                        <a id="wa-simulador" target="_blank" href="#" class="mt-6 flex h-[56px] w-full items-center justify-center gap-2 rounded-full bg-slate-950 text-[15px] font-bold text-white shadow-xl transition hover:bg-black">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.94A9.82 9.82 0 0 0 12.04 2C6.49 2 2 6.43 2 11.92c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.37a9.85 9.85 0 0 0 4.79 1.21h.004c5.55 0 10.04-4.43 10.04-9.92 0-2.65-1.05-5.14-2.95-7.0M12.04 20.55a8.5 8.5 0 0 1-4.34-1.18l-.31-.18-3.12.82.83-2.99-.2-.31a8.36 8.36 0 0 1-1.28-4.45c0-4.64 3.85-8.41 8.58-8.41 2.29 0 4.44.88 6.06 2.48a8.27 8.27 0 0 1 2.45 5.93c0 4.64-3.85 8.41-8.59 8.41m4.71-6.25c-.26-.13-1.53-.74-1.77-.82-.24-.09-.41-.13-.58.13s-.67.82-.82.99c-.15.17-.3.19-.56.06-.26-.13-1.09-.39-2.08-1.25-.77-.67-1.29-1.5-1.44-1.76-.15-.26-.02-.4.11-.53.11-.11.26-.29.39-.43.13-.14.17-.24.26-.4.09-.16.05-.3-.02-.43-.08-.13-.58-1.38-.79-1.89-.21-.49-.42-.58-.43h-.5c-.17 0-.45.06-.69.3-.24.24-.91.87-.91 2.12 0 1.25.93 2.46 1.06 2.63.13.17 1.83 2.75 4.43 3.86.62.26 1.1.42 1.48.54.62.19 1.19.16 1.64.1.5-.07 1.53-.61 1.74-1.21.22-.59.22-1.1.15-1.21-.06-.11-.24-.17-.5-.3"/></svg>
-                            Quero essa economia no WhatsApp
-                        </a>
-                        <div class="mt-3 text-center text-[11px] font-medium text-slate-900/60">Resposta em até 15 min em horário comercial</div>
-                    </div>
-                    <div class="flex items-center justify-between bg-slate-950 px-7 py-3 text-[11px] font-semibold tracking-wide text-white/70">
-                        <span>ESTIMATIVA REAL PONTAL-SP</span><span class="text-brand-yellow">SEM COMPROMISSO</span>
-                    </div>
-                </div>
-            </div>
+<section id="solar" class="section section-light">
+  <div class="container">
+    <h2 class="section-title">Simulador de Energia Solar</h2>
+    <p class="section-sub">Descubra quanto você pode economizar na sua conta de luz</p>
+    <div class="sim-grid">
+      <div class="sim-box">
+        <label>Quanto você paga de luz por mês?</label>
+        <div class="range-wrap">
+          <input type="range" id="bill-input" min="120" max="3000" step="10" value="800" class="range">
+          <span>R$ <input type="number" id="bill-number" value="800" min="120" max="5000" class="range-input"></span>
         </div>
+        <div class="sim-results">
+          <div><span>Consumo estimado</span><strong id="kwh-est">~842 kWh/mês</strong></div>
+          <div><span>Sistema recomendado</span><strong id="kwp-est">6,2 kWp</strong></div>
+          <div><span>Quantidade de placas</span><strong id="plates-est">11 placas</strong></div>
+          <div><span>Economia mensal</span><strong id="econ-month" class="highlight">R$ 736</strong></div>
+          <div><span>Economia anual</span><strong id="econ-year">R$ 8.832</strong></div>
+          <div><span>Investimento aproximado</span><strong id="invest-est">R$ 22.480</strong></div>
+          <div><span>Payback</span><strong id="payback-est">30 meses</strong></div>
+        </div>
+        <a href="#" id="wa-simulador" class="btn btn-primary btn-full">Quero essa economia no WhatsApp</a>
+      </div>
+      <div class="sim-info">
+        <h3>Como funciona?</h3>
+        <ul>
+          <li><strong>1.</strong> Analisamos sua conta de luz</li>
+          <li><strong>2.</strong> Dimensionamos o sistema ideal</li>
+          <li><strong>3.</strong> Instalamos com homologação na CPFL</li>
+          <li><strong>4.</strong> Você começa a economizar imediatamente</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- LOJA -->
-<section id="loja" class="bg-slate-950 py-16 lg:py-24">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-start">
-            <div class="reveal order-2 lg:order-1">
-                <div class="overflow-hidden rounded-[28px] border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop" alt="Fachada loja elétrica" class="h-[360px] w-full object-cover lg:h-[520px]"/>
-                </div>
-                <div class="mt-4 grid grid-cols-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop" class="h-[88px] w-full rounded-2xl object-cover border border-white/10" alt=""/>
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" class="h-[88px] w-full rounded-2xl object-cover border border-white/10" alt=""/>
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400&auto=format&fit=crop" class="h-[88px] w-full rounded-2xl object-cover border border-white/10" alt=""/>
-                </div>
-            </div>
-            <div class="reveal order-1 lg:order-2">
-                <div class="inline-flex rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold tracking-widest text-brand-yellow border border-white/10">LOJA FÍSICA</div>
-                <h2 class="font-display mt-4 text-[30px] lg:text-[42px] leading-[0.95] font-extrabold text-white">Tudo para sua instalação,<br/>na hora que você precisa.</h2>
-
-                <div class="mt-6 flex items-start gap-3 rounded-[18px] border border-white/10 bg-white/[0.04] p-4">
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-slate-950">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <div>
-                        <div class="text-[13px] font-semibold tracking-wide text-white/60">ENDEREÇO</div>
-                        <div class="font-display text-[18px] font-bold text-white leading-tight">Av. do Cristo Redentor, 348<br/>Centro - Pontal - SP, 14180-000</div>
-                        <div class="mt-2 flex gap-2">
-                            <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Avenida+do+Cristo+Redentor+348+Pontal+SP" class="rounded-full bg-white px-3 py-1.5 text-[12px] font-bold text-slate-900">Ver no Maps</a>
-                            <span class="rounded-full border border-white/15 px-3 py-1.5 text-[12px] font-semibold text-white">Entrega rápida na cidade</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div class="rounded-[16px] border border-white/10 bg-white/[0.04] p-4">
-                        <div class="text-[12px] font-semibold tracking-wide text-white/50">O QUE VOCÊ ENCONTRA</div>
-                        <ul class="mt-2 space-y-1.5 text-[14px] text-white/90">
-                            <li>• Fios e cabos 1,5mm a 35mm</li>
-                            <li>• Disjuntores, DR, DPS, quadros</li>
-                            <li>• Arandelas e iluminação externa</li>
-                            <li>• Lâmpadas LED, spots, fitas</li>
-                            <li>• Ferramentas, tomadas e interruptores</li>
-                        </ul>
-                    </div>
-                    <div class="rounded-[16px] border border-white/10 bg-white/[0.04] p-4">
-                        <div class="text-[12px] font-semibold tracking-wide text-white/50">HORÁRIO</div>
-                        <div class="mt-2 space-y-1 text-[14px] text-white/80"><div class="flex justify-between"><span>Seg - Sex</span><b class="text-white">08h - 18h</b></div><div class="flex justify-between"><span>Sábado</span><b class="text-white">08h - 13h</b></div><div class="flex justify-between text-white/50"><span>Domingo</span><b>Fechado</b></div></div>
-                        <div class="mt-4 rounded-xl bg-brand-yellow p-3"><div class="text-[12px] font-bold text-slate-900">Atendimento técnico na bancada</div><div class="text-[12px] text-slate-800">Tira-dúvidas gratuito de instalação</div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="loja" class="section">
+  <div class="container loja-grid">
+    <div>
+      <h2 class="section-title">Loja Física</h2>
+      <p>Na nossa loja você encontra tudo para sua obra elétrica com preço justo e qualidade garantida.</p>
+      <ul class="checklist">
+        <li>Fios e cabos cobre</li><li>Disjuntores e quadros</li><li>Arandelas e plafons</li><li>Lâmpadas LED</li><li>Ferramentas profissionais</li><li>Conduítes e eletrocalhas</li>
+      </ul>
+      <div class="address">
+        <strong>Endereço:</strong> Avenida do Cristo Redentor, 348 - Pontal-SP
+        <br><strong>Horário:</strong> Seg a Sáb das 8h às 18h
+        <br><a href="https://maps.google.com/?q=Avenida+do+Cristo+Redentor+348+Pontal+SP" target="_blank" class="link">Como chegar →</a>
+      </div>
     </div>
+    <div class="map-box">📍 Nossa Localização em Pontal-SP</div>
+  </div>
 </section>
 
-<!-- SOBRE -->
-<section id="sobre" class="bg-[#FCFCF9] py-16 lg:py-[96px]">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
-            <div class="reveal">
-                <div class="inline-flex rounded-full bg-slate-900 px-3 py-1 text-[11px] font-bold tracking-widest text-white">SOBRE NÓS</div>
-                <h2 class="font-display mt-4 text-[32px] lg:text-[44px] leading-[0.95] font-extrabold text-slate-900">Segurança não é custo.<br/>É o nosso jeito de trabalhar.</h2>
-                <div class="mt-6 flex gap-4">
-                    <div class="h-[64px] w-[2px] bg-brand-yellow"></div>
-                    <p class="max-w-[520px] text-[15px] leading-[1.7] text-slate-600">A JP Eletro Solar nasceu da oficina de elétrica do bairro para se tornar referência em Pontal e região. Crescemos com a mesma filosofia: fazer certo, com material bom e explicar para o cliente o que está sendo feito. Hoje atendemos casas, comércios, sítios, indústrias e igrejas com equipe própria, veículo identificado e nota fiscal. Não terceirizamos instalação solar.</p>
-                </div>
-                <div class="mt-8 grid grid-cols-3 gap-3">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-4 text-center"><div class="font-display text-[22px] font-extrabold text-slate-900">Missão</div><div class="mt-1 text-[12px] leading-[1.5] text-slate-600">Entregar energia segura e economia real com atendimento humano</div></div>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-4 text-center"><div class="font-display text-[22px] font-extrabold text-slate-900">Visão</div><div class="mt-1 text-[12px] leading-[1.5] text-slate-600">Ser a elétrica de confiança da família pontalense por gerações</div></div>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-4 text-center"><div class="font-display text-[22px] font-extrabold text-slate-900">Valores</div><div class="mt-1 text-[12px] leading-[1.5] text-slate-600">Segurança, honestidade, capricho e sustentabilidade</div></div>
-                </div>
-            </div>
-            <div class="reveal grid sm:grid-cols-2 gap-4">
-                <div class="rounded-[22px] bg-slate-900 p-7 text-white">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-yellow text-slate-950 font-bold">1</div>
-                    <div class="font-display mt-4 text-[18px] font-bold">Segurança em primeiro lugar</div>
-                    <p class="mt-2 text-[13.5px] leading-[1.6] text-white/70">Equipe com NR10, NR35, uso de EPI, aterramento verificado e DR/DPS obrigatório. Não improvisamos.</p>
-                </div>
-                <div class="rounded-[22px] border border-slate-200 bg-white p-7">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 font-bold">2</div>
-                    <div class="font-display mt-4 text-[18px] font-bold text-slate-900">Transparência total</div>
-                    <p class="mt-2 text-[13.5px] leading-[1.6] text-slate-600">Orçamento detalhado, fotos do antes/depois, lista de materiais e garantia por escrito. Você sabe o que está pagando.</p>
-                </div>
-                <div class="rounded-[22px] border border-slate-200 bg-white p-7">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 font-bold">3</div>
-                    <div class="font-display mt-4 text-[18px] font-bold text-slate-900">Pós-venda que atende</div>
-                    <p class="mt-2 text-[13.5px] leading-[1.6] text-slate-600">Somos daqui. Se precisar, batemos na sua porta. Suporte de monitoramento solar e revisão anual.</p>
-                </div>
-                <div class="rounded-[22px] bg-brand-yellow p-7">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-brand-yellow font-bold">4</div>
-                    <div class="font-display mt-4 text-[18px] font-bold text-slate-950">Sustentabilidade prática</div>
-                    <p class="mt-2 text-[13.5px] leading-[1.6] text-slate-900/80">Cada telhado solar evita toneladas de CO₂. Já deixamos de emitir mais de 420 toneladas com nossos projetos.</p>
-                </div>
-            </div>
-        </div>
+<section id="sobre" class="section section-light">
+  <div class="container">
+    <h2 class="section-title">Sobre a JP Eletro Solar</h2>
+    <p class="about">Somos uma empresa especializada em serviços elétricos com mais de 10 anos de experiência no mercado de Pontal e região. Nossa missão é oferecer soluções seguras e de alta qualidade para nossos clientes, buscando sempre as melhores soluções sustentáveis em energia solar.</p>
+    <div class="seals">
+      <span>NR10 Qualificado</span><span>CREA Ativo</span><span>Garantia 25 Anos</span><span>Atendimento 24h</span>
     </div>
+  </div>
 </section>
 
-<!-- PROVA SOCIAL OBRAS -->
-<section class="bg-white py-16 lg:py-24 border-y border-slate-200">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="flex flex-wrap items-end justify-between gap-4">
-            <div class="reveal">
-                <div class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700">OBRAS REAIS</div>
-                <h2 class="font-display mt-3 text-[30px] lg:text-[40px] leading-[0.95] font-extrabold text-slate-900">Alguns projetos que<br/>viraram economia.</h2>
-            </div>
-            <div class="reveal text-[14px] text-slate-500 max-w-[360px]">Fotos reais de clientes em Pontal, Sertãozinho e Barrinha. Todas com autorização e monitoramento ativo.</div>
-        </div>
-        <div class="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-            <div class="reveal group relative overflow-hidden rounded-[20px] border border-slate-200">
-                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop" class="h-[220px] lg:h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.04]" alt="Instalação solar residencial"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 p-4"><div class="rounded-full bg-brand-yellow px-2.5 py-1 text-[11px] font-bold text-slate-950">Residencial 6,05kWp - Pontal</div><div class="mt-2 font-display text-[14px] font-bold text-white">Economia: R$ 740/mês</div></div>
-            </div>
-            <div class="reveal group relative overflow-hidden rounded-[20px] border border-slate-200">
-                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=800&auto=format&fit=crop" class="h-[220px] lg:h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.04]" alt="Instalação comercial"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 p-4"><div class="rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-slate-900">Comercial 12kWp - Centro</div><div class="mt-2 font-display text-[14px] font-bold text-white">Conta de R$ 1.420 → R$ 98</div></div>
-            </div>
-            <div class="reveal group relative overflow-hidden rounded-[20px] border border-slate-200">
-                <img src="https://images.unsplash.com/photo-1555634105-33f9e6bd5a95?q=80&w=800&auto=format&fit=crop" class="h-[220px] lg:h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.04]" alt="Quadro elétrico organizado"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 p-4"><div class="rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-slate-900">Quadro com DR, DPS e disjuntores novos</div><div class="mt-2 font-display text-[14px] font-bold text-white">Instalação NR10 completa</div></div>
-            </div>
-            <div class="reveal group relative overflow-hidden rounded-[20px] border border-slate-200">
-                <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=800&auto=format&fit=crop" class="h-[220px] lg:h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.04]" alt="Fazenda solar"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 p-4"><div class="rounded-full bg-brand-yellow px-2.5 py-1 text-[11px] font-bold text-slate-950">Rural 25kWp - Sítio</div><div class="mt-2 font-display text-[14px] font-bold text-white">Bombeamento + resfriamento leite</div></div>
-            </div>
-            <div class="reveal group relative overflow-hidden rounded-[20px] border border-slate-200">
-                <img src="https://images.unsplash.com/photo-1565608087341-404b25492fee?q=80&w=800&auto=format&fit=crop" class="h-[220px] lg:h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.04]" alt="Iluminação"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 p-4"><div class="rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-slate-900">Iluminação fachada LED - Loja</div><div class="mt-2 font-display text-[14px] font-bold text-white">80% menos consumo</div></div>
-            </div>
-            <div class="reveal group relative overflow-hidden rounded-[20px] border border-slate-200 bg-slate-50 flex flex-col items-center justify-center p-8 text-center">
-                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-white font-bold text-xl">+</div>
-                <div class="font-display mt-4 text-[20px] font-bold text-slate-900">Sua obra aqui?</div>
-                <p class="mt-2 text-[13px] text-slate-600">Mande uma foto do seu padrão ou conta de luz. Orçamento em até 2h.</p>
-                <a target="_blank" href="https://wa.me/5516999999999?text=Quero%20or%C3%A7amento%20para%20minha%20obra" class="mt-4 inline-flex h-10 items-center justify-center rounded-full bg-slate-900 px-5 text-[13px] font-bold text-white">Enviar no WhatsApp</a>
-            </div>
-        </div>
+<section id="contato" class="section">
+  <div class="container contact-grid">
+    <div>
+      <h2 class="section-title">Fale Conosco</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" id="c-nome" placeholder="Seu nome completo" required>
+        <input type="tel" id="c-tel" placeholder="(16) 99999-9999" required>
+        <select id="c-serv" required>
+          <option value="">Qual serviço você precisa?</option>
+          <option>Energia Solar</option>
+          <option>Instalação Elétrica</option>
+          <option>Manutenção</option>
+          <option>Projeto Elétrico</option>
+          <option>Loja Física</option>
+        </select>
+        <textarea id="c-msg" placeholder="Descreva sua necessidade"></textarea>
+        <button type="submit" class="btn btn-primary btn-full">Enviar via WhatsApp</button>
+      </form>
     </div>
+    <div class="contact-cards">
+      <a href="#" class="contact-card" data-wa-link data-wa-base="Olá! Gostaria de falar com a JP Eletro Solar.">
+        <strong>WhatsApp</strong><span>Atendimento rápido e direto</span>
+      </a>
+      <a href="#" class="contact-card"><strong>Instagram</strong><span>@jpeletrosolar</span></a>
+      <a href="#" class="contact-card"><strong>Facebook</strong><span>JP Eletro Solar</span></a>
+    </div>
+  </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="bg-[#F6F5EF] py-16 lg:py-24">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-10">
-            <div class="reveal">
-                <div class="inline-flex rounded-full bg-slate-900 px-3 py-1 text-[11px] font-bold tracking-widest text-white">FALE COM A JP</div>
-                <h2 class="font-display mt-4 text-[32px] lg:text-[42px] leading-[0.95] font-extrabold text-slate-900">Orçamento rápido, sem<br/>enrolação e sem visita paga.</h2>
-                <p class="mt-4 text-[15px] leading-[1.6] text-slate-600">Preencha o formulário ou chame no WhatsApp. Respondemos em minutos. Se preferir, passe na loja física na Av. do Cristo Redentor, 348.</p>
-
-                <form id="contact-form" class="mt-8 space-y-4 rounded-[22px] border border-slate-200 bg-white p-6 lg:p-7 shadow-soft">
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div><label class="text-[11px] font-bold tracking-widest text-slate-500">NOME</label><input required id="c-nome" class="mt-2 h-12 w-full rounded-full border border-slate-200 bg-slate-50 px-4 text-[14px] outline-none focus:border-slate-900 focus:bg-white" placeholder="Seu nome completo"/></div>
-                        <div><label class="text-[11px] font-bold tracking-widest text-slate-500">TELEFONE / WHATSAPP</label><input required id="c-tel" class="mt-2 h-12 w-full rounded-full border border-slate-200 bg-slate-50 px-4 text-[14px] outline-none focus:border-slate-900 focus:bg-white" placeholder="(16) 9 9999-9999"/></div>
-                    </div>
-                    <div><label class="text-[11px] font-bold tracking-widest text-slate-500">SERVIÇO DE INTERESSE</label>
-                        <select id="c-serv" class="mt-2 h-12 w-full rounded-full border border-slate-200 bg-slate-50 px-4 text-[14px] outline-none focus:border-slate-900 focus:bg-white">
-                            <option>Energia Solar - Quero economizar até 95%</option>
-                            <option>Instalação Elétrica Residencial/Comercial</option>
-                            <option>Manutenção / Emergência 24h</option>
-                            <option>Projeto Elétrico + ART</option>
-                            <option>Compra na loja física / Entrega</option>
-                        </select>
-                    </div>
-                    <div><label class="text-[11px] font-bold tracking-widest text-slate-500">MENSAGEM (OPCIONAL)</label><textarea id="c-msg" rows="3" class="mt-2 w-full rounded-[18px] border border-slate-200 bg-slate-50 px-4 py-3 text-[14px] outline-none focus:border-slate-900 focus:bg-white" placeholder="Ex: minha conta é R$ 490, casa com 3 ar-condicionados"></textarea></div>
-                    <button type="submit" class="flex h-[52px] w-full items-center justify-center gap-2 rounded-full bg-slate-950 text-[15px] font-bold text-white transition hover:bg-black">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.94A9.82 9.82 0 0 0 12.04 2C6.49 2 2 6.43 2 11.92c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.37a9.85 9.85 0 0 0 4.79 1.21h.004c5.55 0 10.04-4.43 10.04-9.92 0-2.65-1.05-5.14-2.95-7.0M12.04 20.55a8.5 0 0 1-4.34-1.18l-.31-.18-3.12.82.83-2.99-.2-.31a8.36 8.36 0 0 1-1.28-4.45c0-4.64 3.85-8.41 8.58-8.41 2.29 0 4.44.88 6.06 2.48a8.27 8.27 0 0 1 2.45 5.93c0 4.64-3.85 8.41-8.59 8.41m4.71-6.25c-.26-.13-1.53-.74-1.77-.82-.24-.09-.41-.13-.58.13s-.67.82-.82.99c-.15.17-.3.19-.56.06-.26-.13-1.09-.39-2.08-1.25-.77-.67-1.29-1.5-1.44-1.76-.15-.26-.02-.4.11-.53.11-.11.26-.29.39-.43.13-.14.17-.24.26-.4.09-.16.05-.3-.02-.43-.08-.13-.58-1.38-.79-1.89-.21-.49-.42-.42-.58-.43h-.5c-.17 0-.45.06-.69.3-.24.24-.91.87-.91 2.12 0 1.25.93 2.46 1.06 2.63.13.17 1.83 2.75 4.43 3.86.62.26 1.1.42 1.48.54.62.19 1.19.16 1.64.1.5-.07 1.53-.61 1.74-1.21.22-.59.22-1.1.15-1.21-.06-.11-.24-.17-.5-.3"/></svg>
-                        Enviar no WhatsApp agora
-                    </button>
-                    <div class="flex items-center justify-center gap-3 pt-2">
-                        <a target="_blank" href="https://instagram.com" class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-slate-900 hover:text-white transition">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-                        </a>
-                        <a target="_blank" href="https://facebook.com" class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-slate-900 hover:text-white transition">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V6c0-1-.6-2-2-2h-2c-2 0-4 1.3-4 4v2H6v3h2v6h3v-6h2l1-3h-3V10c0-.6.4-1 1-1z"/></svg>
-                        </a>
-                        <a target="_blank" href="https://wa.me/5516999999999" class="inline-flex h-9 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 text-[12px] font-bold text-slate-700 hover:bg-slate-900 hover:text-white transition">WhatsApp (16) 9 9999-9999</a>
-                    </div>
-                </form>
-            </div>
-
-            <div class="reveal">
-                <div class="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft">
-                    <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
-                        <iframe class="h-full w-full border-0"
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                src="https://www.google.com/maps?q=Avenida%20do%20Cristo%20Redentor%20348%20Pontal%20SP&z=17&output=embed">
-                        </iframe>
-                    </div>
-                    <div class="p-6 lg:p-7">
-                        <div class="flex items-center gap-3"><div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-yellow font-display font-extrabold">JP</div><div><div class="font-display text-[16px] font-bold leading-none">JP Eletro Solar</div><div class="text-[12px] text-slate-500">Av. do Cristo Redentor, 348 - Centro - Pontal/SP</div></div></div>
-                        <div class="mt-5 grid grid-cols-2 gap-3 text-[13px]">
-                            <div class="rounded-xl bg-slate-50 p-3"><div class="text-[11px] font-bold tracking-wide text-slate-500">TELEFONE</div><div class="mt-1 font-semibold text-slate-900">(16) 9 9999-9999</div></div>
-                            <div class="rounded-xl bg-slate-50 p-3"><div class="text-[11px] font-bold tracking-wide text-slate-500">E-MAIL</div><div class="mt-1 font-semibold text-slate-900">contato@jpeletrosolar.com.br</div></div>
-                        </div>
-                    </div>
-                <div class="mt-4 rounded-[18px] border border-amber-200 bg-[#FFF9D6] p-4 text-[13px] leading-[1.5] text-slate-800">
-                    <b>Vai nos visitar?</b> Traga sua conta de luz e fotos do padrão de entrada. Em 15 minutos te mostramos a economia exata e parcela que cabe no bolso.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-slate-950 pt-12 pb-[96px] lg:pb-12">
-    <div class="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div class="flex flex-col lg:flex-row justify-between gap-10">
-            <div class="max-w-[380px]">
-                <div class="flex items-center gap-3"><div class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-brand-yellow text-slate-950 font-display font-extrabold">JP</div><div class="leading-[0.9]"><div class="font-display font-extrabold text-[15px] tracking-tight text-white">ELETRO SOLAR</div><div class="text-[10px] font-semibold tracking-[0.18em] text-white/60">PONTAL • SP - DESDE 2014</div></div></div>
-                <p class="mt-4 text-[13px] leading-[1.6] text-white/60">Instalações elétricas e energia solar com segurança certificada. Loja física completa. Atendemos Pontal, Sertãozinho, Barrinha, Jardinópolis e região.</p>
-                <div class="mt-4 text-[11px] leading-[1.6] text-white/40">CNPJ: 00.000.000/0001-00 - JP Eletro Solar Materiais Elétricos LTDA<br/>Av. do Cristo Redentor, 348 - Centro - Pontal/SP - 14180-000<br/>Resp. Técnico: Eng. Eletricista CREA-SP xxxx</div>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 text-[13px]">
-                <div><div class="font-display font-bold text-white">Serviços</div><ul class="mt-3 space-y-2 text-white/60"><li><a href="#servicos" class="hover:text-white">Instalações elétricas</a></li><li><a href="#servicos" class="hover:text-white">Manutenção 24h</a></li><li><a href="#servicos" class="hover:text-white">Projetos e ART</a></li><li><a href="#solar" class="hover:text-white">Energia solar</a></li><li><a href="#loja" class="hover:text-white">Loja física</a></li></ul></div>
-                <div><div class="font-display font-bold text-white">Empresa</div><ul class="mt-3 space-y-2 text-white/60"><li><a href="#sobre" class="hover:text-white">Sobre nós</a></li><li><a href="#contato" class="hover:text-white">Contato</a></li><li><a href="#" class="hover:text-white">Garantia e suporte</a></li><li><a href="#" class="hover:text-white">Política de privacidade</a></li></ul></div>
-                <div class="col-span-2 sm:col-span-1"><div class="font-display font-bold text-white">Atendimento</div><div class="mt-3 rounded-2xl bg-white/[0.06] border border-white/10 p-4"><div class="text-[12px] text-white/60">Segunda a Sexta 08h-18h • Sábado 08h-13h</div><a target="_blank" href="https://wa.me/5516999999999" class="mt-3 inline-flex h-10 w-full items-center justify-center rounded-full bg-brand-yellow text-[13px] font-bold text-slate-950">Chamar no WhatsApp</a></div></div>
-            </div>
-        <div class="mt-10 flex flex-col lg:flex-row items-center justify-between gap-3 border-t border-white/10 pt-6 text-[11px] text-white/40">
-            <div>© <span id="year"></span> JP Eletro Solar. Todos os direitos reservados. Feito em Pontal-SP com energia limpa.</div>
-            <div class="flex items-center gap-3"><span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>Site seguro • HTTPS</span><span>Desenvolvido com ❤ para economizar sua conta</span></div>
-        </div>
-    </div>
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> JP Eletro Solar. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
+  </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a id="wa-float" target="_blank" href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JP%20Eletro%20Solar"
-   class="fixed bottom-5 right-5 z-[60] flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] wa-pulse transition hover:scale-[1.05]">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.94A9.82 9.82 0 0 0 12.04 2C6.49 2 2 6.43 2 11.92c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.37a9.85 9.85 0 0 0 4.79 1.21h.004c5.55 0 10.04-4.43 10.04-9.92 0-2.65-1.05-5.14-2.95-7.0M12.04 20.55a8.5 0 0 1-4.34-1.18l-.31-.18-3.12.82.83-2.99-.2-.31a8.36 0 0 1-1.28-4.45c0-4.64 3.85-8.41 8.58-8.41 2.29 0 4.44.88 6.06 2.48a8.27 8.27 0 0 1 2.45 5.93c0 4.64-3.85 8.41-8.59 8.41m4.71-6.25c-.26-.13-1.53-.74-1.77-.82-.24-.09-.41-.13-.58.13s-.67.82-.82.99c-.15.17-.3.19-.56.06-.26-.13-1.09-.39-2.08-1.25-.77-.67-1.29-1.5-1.44-1.76-.15-.26-.02-.4.11-.53.11-.11.26-.29.39-.43.13-.14.17-.24.26-.4.09-.16.05-.3-.02-.43-.08-.13-.58-1.38-.79-1.89-.21-.49-.42-.42-.58-.43h-.5c-.17 0-.45.06-.69.3-.24.24-.91.87-.91 2.12 0 1.25.93 2.46 1.06 2.63.13.17 1.83 2.75 4.43 3.86.62.26 1.1.42 1.48.54.62.19 1.19.16 1.64.1.5-.07 1.53-.61 1.74-1.21.22-.59.22-1.1.15-1.21-.06-.11-.24-.17-.5-.3"/></svg>
-</a>
+<a href="#" id="wa-float" class="wa-float" data-wa-link data-wa-base="Olá! Gostaria de um orçamento com a JP Eletro Solar.">💬</a>
+
 <script src="script.js"></script>
 </body>
 </html>
