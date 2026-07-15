@@ -1,5 +1,5 @@
 // CONFIG - TROQUE SEU WHATSAPP AQUI
-const WHATSAPP_NUMBER = '5516999999999';
+const WHATSAPP_NUMBER = '5516991705736';
 
 // Menu mobile
 const menuBtn = document.getElementById('menu-btn');
